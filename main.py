@@ -21,12 +21,6 @@ from src.utils import formatear_reporte_valor
 from src.utils import mostrar_resultado
 from src.utils import generar_ficha_contribuyente
 
-from src.utils import limpiar_nit
-from src.utils import validar_nit
-from src.utils import normalizar_texto
-from src.utils import procesar_nit
-from src.utils import pipeline_nit
-
 from src.utils import esta_al_dia
 from src.utils import aplicar_descuento
 from src.utils import asignar_prioridad
@@ -74,19 +68,22 @@ def menu_funciones_basicas():
     print("\n--- Funciones básicas ---")
 
     # TODO: descomenta cuando hayas completado calcular_iva
-    # valor = 1_500_000
-    # iva = calcular_iva(valor)
-    # mostrar_resultado("IVA sobre $1,500,000", iva)
+    valor = 1_500_000
+    iva = calcular_iva(valor)
+    print("El valor del IVA es ", iva)
+    
+    
+    mostrar_resultado(f"IVA sobre ${valor:,.0f}", iva)
 
     # TODO: descomenta cuando hayas completado formatear_reporte_valor
-    # linea = formatear_reporte_valor("900123456", "Empresa ABC S.A.S.", 1_500_000, "ACTIVO")
-    # print(f"  Reporte: {linea}")
+    linea = formatear_reporte_valor("900123456", "Empresa ABC S.A.S.", 1_500_000, "ACTIVO")
+    print(f"  Reporte: {linea}")
 
     # TODO: descomenta cuando hayas completado generar_ficha_contribuyente
-    # ficha = generar_ficha_contribuyente(
-    #     "900123456", "Empresa ABC S.A.S.", "Bogota", "202401", 1_500_000, "ACTIVO"
-    # )
-    # print(ficha)
+    ficha = generar_ficha_contribuyente(
+         "900123456", "Empresa ABC S.A.S.", "Bogota", "202401", 1_500_000, "ACTIVO"
+     )
+    print(ficha)
     pass
 
 
