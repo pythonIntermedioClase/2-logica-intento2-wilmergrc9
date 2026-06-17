@@ -1,4 +1,4 @@
-# Sesión 2: Funciones, Condicionales, Ciclos, Listas y Diccionarios
+# Sesión 2 y 3 : Funciones, Condicionales, Ciclos, Listas, Markdown
 
 **Python Intermedio para Análisis de Datos — DIAN 2026**
 
@@ -1476,7 +1476,7 @@ modifica directamente la lista que recibe. Esto contrasta con el patrón de
 crear una lista nueva: aquí la intención es cambiar la lista que ya existe,
 no producir una copia modificada.
 
-### `ordenar_valores` — algoritmo de burbuja
+### `ordenar_valores` — algoritmo de burbuja - solo para usuarios avanzados
 
 `ordenar_valores` retorna una copia de la lista ordenada sin modificar la
 original. El ordenamiento usa el **algoritmo de burbuja**: recorre la lista
@@ -1592,7 +1592,7 @@ print(f"  Total verificado  : {len(menores) + len(mayores) == len(valores)}")
 
 ---
 
-## 11. Diccionarios
+## 11. Diccionarios  - solo para usuarios más avanzados
 
 Un diccionario asocia claves con valores. A diferencia de una lista, donde
 accedes a los elementos por su posición numérica, en un diccionario accedes
@@ -1812,5 +1812,5 @@ for municipio in promedios:
 ## Cierre
 
 Al terminar esta sesión tienes implementadas todas las funciones del proyecto en `utils.py`, el menú del proyecto funciona con las nueve opciones activas, y los commits reflejan el progreso por sección.
-En la Sesión 3 incorporamos `numpy` y posteriormente Pandas, donde verás que muchos de los patrones que hoy implementaste manualmente (filtrar, agrupar, calcular estadísticas) tienen equivalentes directos en los DataFrame.
+En la Sesión 4 incorporamos `numpy` y posteriormente Pandas, donde verás que muchos de los patrones que hoy implementaste manualmente (filtrar, agrupar, calcular estadísticas) tienen equivalentes directos en los DataFrame.
 
