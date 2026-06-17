@@ -434,7 +434,14 @@ def aplicar_descuento(valor, pago_voluntario):
     #    - Retorna valor_con_descuento
     # 2. Si pago_voluntario es False:
     #    - Retorna valor sin modificar
-    pass
+    #pass
+    if pago_voluntario==True:
+        descuento = valor*0.10
+        valor_con_descuento = valor-descuento
+        return valor_con_descuento
+    else:
+        return valor
+
 
 
 def asignar_prioridad(valor, tiene_historial_incumplimiento):
@@ -461,7 +468,13 @@ def asignar_prioridad(valor, tiene_historial_incumplimiento):
     #    - si valor_alto AND tiene_historial: retorna "ALTA"
     #    - si valor_alto OR tiene_historial: retorna "MEDIA"
     #    - de lo contrario: retorna "BAJA"
-    pass
+    #pass
+    if valor> 1000000 and tiene_historial_incumplimiento==True:
+        return "ALTA"
+    elif valor> 1000000 or tiene_historial_incumplimiento==True:
+        return "MEDIA"
+    else:
+        return "BAJA"
 
 
 # ---------------------------------------------------------------------------

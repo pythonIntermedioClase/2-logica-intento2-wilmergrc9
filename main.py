@@ -120,17 +120,17 @@ def menu_condicionales_simples():
          print(f"  {dias} días de mora → {estado}")
 
     # TODO: descomenta cuando hayas completado aplicar_descuento
-    # valor_base = 1_000_000
-    # con_descuento = aplicar_descuento(valor_base, True)
-    # sin_descuento = aplicar_descuento(valor_base, False)
-    # mostrar_resultado("Con descuento voluntario", con_descuento)
-    # mostrar_resultado("Sin descuento", sin_descuento)
+    valor_base = 1_000_000
+    con_descuento = aplicar_descuento(valor_base, True)
+    sin_descuento = aplicar_descuento(valor_base, False)
+    mostrar_resultado("Con descuento voluntario", con_descuento)
+    mostrar_resultado("Sin descuento", sin_descuento)
 
     # TODO: descomenta cuando hayas completado asignar_prioridad
-    # casos = [(2_000_000, True), (2_000_000, False), (500_000, True), (500_000, False)]
-    # for valor, historial in casos:
-    #     prioridad = asignar_prioridad(valor, historial)
-    #     print(f"  ${valor:,} / historial={historial} → {prioridad}")
+    casos = [(2_000_000, True), (2_000_000, False), (500_000, True), (500_000, False)]
+    for valor, historial in casos:
+        prioridad = asignar_prioridad(valor, historial)
+        print(f"  ${valor:,} / historial={historial} → {prioridad}")
     #pass
 
 
