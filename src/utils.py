@@ -703,7 +703,14 @@ def imprimir_nits_validos(nits):
     #    - Llama a validar_nit(nit)
     #    - Si es válido: imprime "  {contador}. {nit}"
     #      e incrementa: contador = contador + 1
-    pass
+    #pass
+    contador=0
+    total =len(nits)
+    for nit in  nits:
+        if validar_nit(nit):
+            contador = contador+1
+            print(f"NIT valido {contador} : {nit}")
+    print(f"Total válidos: {contador} de {total}")
 
 
 def calcular_totales(valores):
@@ -733,7 +740,15 @@ def calcular_totales(valores):
     #    - Actualiza el máximo: si valor > maximo, haz maximo = valor
     # 4. Calcula el promedio: promedio = total / len(valores)
     # 5. Retorna total, promedio, maximo (los tres en esa línea)
-    pass
+    #
+    total = 0
+    maximo=valores[0]
+    for valor in valores:
+        total = total + valor
+        if valor > maximo:
+            maximo=valor
+    promedio=total/len(valores)
+    return total, promedio, maximo
 
 
 def generar_periodos_multiple(anio_inicio, anio_fin, meses_por_anio=12):
@@ -764,7 +779,13 @@ def generar_periodos_multiple(anio_inicio, anio_fin, meses_por_anio=12):
     #      (el :02d formatea el mes con cero a la izquierda: 1 -> "01")
     #    - Agrega a la lista: periodos.append(codigo)
     # 4. Retorna periodos
-    pass
+    #pass
+    periodos = []
+    for anio in range (anio_inicio,anio_fin+1):
+        for mes in range (1,meses_por_anio+1):
+            codigo = f"{anio}{mes:02d}"
+            periodos.append(codigo)
+    return periodos
 
 
 # ---------------------------------------------------------------------------
