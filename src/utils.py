@@ -313,7 +313,8 @@ def normalizar_texto(texto):
     # 2. .upper()                convierte a mayúsculas
     # 3. .replace("  ", " ")     elimina espacios dobles internos
     # Retorna todo en una sola línea: return texto.strip().upper().replace(...)
-    pass
+    #pass
+    return texto.strip().upper().replace("  "," ")
 
 
 def procesar_nit(nit):
@@ -370,7 +371,15 @@ def pipeline_nit(nit):
     # 4. Si es_valido es False:
     #    informe = f"NIT {nit} — rechazado: formato inválido"
     # 5. Retorna informe.
-    pass
+    #pass
+    nit_limpio=limpiar_nit(nit)
+    es_valido=validar_nit(nit_limpio)
+    if es_valido :
+        informe = f"NIT {nit_limpio} -- apto para procesamiento"
+    else :
+        informe = f"NIT {nit_limpio} -- rechazado: formato inválido"
+    return informe
+        
 
 
 # ---------------------------------------------------------------------------

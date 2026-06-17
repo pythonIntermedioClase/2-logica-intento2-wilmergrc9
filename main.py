@@ -22,7 +22,7 @@ from src.utils import mostrar_resultado
 from src.utils import generar_ficha_contribuyente
 
 from src.utils import procesar_nit
-
+from src.utils import pipeline_nit
 
 from src.utils import esta_al_dia
 from src.utils import aplicar_descuento
@@ -101,10 +101,10 @@ def menu_encadenamiento():
         print(f"  {resultado}")
 
     # TODO: descomenta cuando hayas completado pipeline_nit
-    # print()
-    # for nit in casos:
-    #     informe = pipeline_nit(nit)
-    #     print(f"  {informe}")
+    print()
+    for nit in casos:
+         informe = pipeline_nit(nit)
+         print(f"  {informe}")
     #pass
 
 
